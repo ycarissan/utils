@@ -23,3 +23,10 @@ xrandr -d :0 --output eDP-1 --mode 2048x1152
 ## Printer discovery
 
 Allow for mDNS in the firewall.
+
+## CLI Convert a document with libreoffice
+
+Allow for mDNS in the firewall.
+```
+libreoffice --headless --convert-to pdf toto.odp
+```
