@@ -28,3 +28,8 @@ Allow for mDNS in the firewall.
 ```
 libreoffice --headless --convert-to pdf toto.odp
 ```
+
+## Update DNS
+```
+netconfig update -f
+```
