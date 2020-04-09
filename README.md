@@ -33,3 +33,13 @@ libreoffice --headless --convert-to pdf toto.odp
 ```
 netconfig update -f
 ```
+
+## Globalprotect
+```
+sudo rpm -ivh GlobalProtect_rpm
+sudo ln -fTs /opt/paloaltonetworks/globalprotect/gpd.service /etc/systemd/system/gpd.service
+-5.1.1.0-17.rpm
+systemctl daemon-reload
+systemctl enable --now gpd.service
+globalprotect
+```
