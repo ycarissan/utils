@@ -41,5 +41,5 @@ sudo ln -fTs /opt/paloaltonetworks/globalprotect/gpd.service /etc/systemd/system
 -5.1.1.0-17.rpm
 systemctl daemon-reload
 systemctl enable --now gpd.service
-globalprotect
+globalprotect connect --portal vpn.univ-amu.fr
 ```
