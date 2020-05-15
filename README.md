@@ -1,6 +1,11 @@
 # utils
 
 ## backlight
+
+```
+git clone git@github.com:ycarissan/brightness.git
+```
+
 Allow for modification of the brightness by appropriate users (adapt to your situation) :
 ```
 > cat /etc/tmpfiles.d/brightnessyc.conf 
