@@ -48,3 +48,9 @@ systemctl daemon-reload
 systemctl enable --now gpd.service
 globalprotect connect --portal vpn.univ-amu.fr
 ```
+
+## Git
+Store user/pwd in a git project.
+```
+git config credential.helper store
+```
