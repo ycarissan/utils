@@ -1,5 +1,12 @@
 # utils
 
+## Widgets
+
+```
+git clone git@github.com:deficient/volume-control.git
+git clone git@github.com:deficient/battery-widget.git
+```
+
 ## backlight
 
 ```
