@@ -75,3 +75,8 @@ EndSection
 
 EOF
 ```
+
+## Update Xresources
+```
+xrdb -merge ~/.Xresources
+```
