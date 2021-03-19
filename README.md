@@ -80,3 +80,9 @@ EOF
 ```
 xrdb -merge ~/.Xresources
 ```
+
+## Wacom
+```
+xsetwacom --list devices
+xsetwacom set 24 mode relative
+```
