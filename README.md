@@ -87,6 +87,7 @@ xsetwacom --list devices
 xsetwacom set 24 mode relative
 ```
 # Recover
+From https://feeding.cloud.geek.nz/posts/recovering-from-unbootable-ubuntu-encrypted-lvm-root-partition/
 ```
 sudo cryptsetup luksOpen /dev/nvme0n1p3 nvme0n1p3_crypt
 sudo vgchange -ay
