@@ -86,3 +86,14 @@ xrdb -merge ~/.Xresources
 xsetwacom --list devices
 xsetwacom set 24 mode relative
 ```
+# Recover
+sudo cryptsetup luksOpen /dev/nvme0n1p3 nvme0n1p3_crypt
+sudo vgchange -ay
+sudo mount /dev/mapper/vgubuntu-root /mnt
+sudo mount /dev/nvme0n1p2 /mnt/boot
+sudo mount -t proc proc /mnt/proc
+sudo mount -o bind /dev /mnt/dev
+sudo mount -t sysfs sysfs /mnt/sys
+sudo mount --bind /etc/resolv.conf /mnt/etc/resolv.conf 
+chroot /mnt
+sudo chroot /mnt
