@@ -1,4 +1,13 @@
 # utils
+## Screenshots
+
+### Using import Command to Take Desktop Screenshot
+
+```import -window root image1.png```
+
+### Using import Command to Take Selected Area of Screen
+
+```import calc.png```
 
 ## Widgets
 
