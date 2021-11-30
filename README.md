@@ -1,4 +1,10 @@
 # utils
+## Slurm interactive job
+
+```
+srun -n NPROC --pty bash -i
+```
+
 ## Screenshots
 
 ### Using import Command to Take Desktop Screenshot
