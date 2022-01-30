@@ -117,10 +117,10 @@ sudo chroot /mnt
 
 # chroot and graphics
 ```
-mkdir -p /mnt/.X11-unix
-mount --bind /tmp/.X11-unix /mnt/tmp/.X11-unix
+mkdir -p /mnt//tmp/.X11-unix
+sudo mount --bind /tmp/.X11-unix /mnt/tmp/.X11-unix
 xhost +
-chroot /test
+sudo chroot /mnt
 export DISPLAY=:0
 xterm
 ```
