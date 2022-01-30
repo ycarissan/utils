@@ -114,3 +114,13 @@ sudo mount -t sysfs sysfs /mnt/sys
 sudo mount --bind /etc/resolv.conf /mnt/etc/resolv.conf
 sudo chroot /mnt
 ```
+
+# chroot and graphics
+```
+mkdir -p /mnt/.X11-unix
+mount --bind /tmp/.X11-unix /mnt/tmp/.X11-unix
+xhost +
+chroot /test
+export DISPLAY=:0
+xterm
+```
