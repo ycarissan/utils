@@ -111,6 +111,7 @@ sudo mount /dev/nvme0n1p2 /mnt/boot
 sudo mount -t proc proc /mnt/proc
 sudo mount -o bind /dev /mnt/dev
 sudo mount -t sysfs sysfs /mnt/sys
+sudo mount --bind /dev/pts /mnt/dev/pts
 sudo mount --bind /etc/resolv.conf /mnt/etc/resolv.conf
 sudo chroot /mnt
 ```
