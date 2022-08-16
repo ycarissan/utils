@@ -125,3 +125,8 @@ sudo chroot /mnt
 export DISPLAY=:0
 xterm
 ```
+# Apt get security key
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+```
