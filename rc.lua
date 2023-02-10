@@ -59,7 +59,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
+terminal = "uxterm"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -129,7 +129,7 @@ mymanualsmenu = {
    { "Gimic",     "evince " .. "/home/yannick/Documents/Manuals/gimic.pdf",                 lookup_icon("evince", 16)},
    { "MultiWFN",  "evince " .. "/home/yannick/Documents/Manuals/Manual_3.4.1_MultiWFN.pdf", lookup_icon("evince", 16)},
    { "Molcas",    "evince " .. "/home/yannick/Documents/Manuals/MolcasManual.pdf",          lookup_icon("evince", 16)},
-   { "Orca",      "evince " .. "/home/yannick/Documents/Manuals/OrcaManual.pdf",            lookup_icon("evince", 16)},
+   { "Orca",      "evince " .. "/home/yannick/Documents/Manuals/orca_manual.pdf",           lookup_icon("evince", 16)},
    { "TopChem2",  "evince " .. "/home/yannick/Documents/Manuals/TopChem2_user_manual.pdf",  lookup_icon("evince", 16)},
    { "Turbomole", "evince " .. "/home/yannick/Documents/Manuals/Turbomole_Manual_7-3.pdf",  lookup_icon("evince", 16)},
 }
@@ -156,7 +156,7 @@ mymainmenu = freedesktop.menu.build({
 --        { "E-mail",   "chromium",     lookup_icon("thunderbird", 16)   },
          { "www",      "firefox",         lookup_icon("firefox", 16)       },
          { "E-mail",   "thunderbird",     lookup_icon("thunderbird", 16)   },
-        { "Files",    "Thunar",          lookup_icon("Thunar", 16)        },
+        { "Files",    "Nautilus",          lookup_icon("nautilus", 16)        },
         { "Office",   "libreoffice",     lookup_icon("applications-office", 16)        },
         { "PyCharm",   "pycharm.sh",     lookup_icon("pattern-python-devel", 16)        },
         { "MySystem",   mysystemmenu,      lookup_icon("preferences-system", 16) },
@@ -251,7 +251,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
 --    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-    awful.tag({ "sys", "www", "mail", "4", "LaTeX", "6", "office", "8", "9" }, s, awful.layout.layouts[2])
+    awful.tag({ "sys", "www", "mail", "4", "LaTeX", "6", "office", "slack", "win" }, s, awful.layout.layouts[2])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -357,8 +357,8 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "t", function () awful.spawn("Thunar") end,
-              {description = "open thunar", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "t", function () awful.spawn("nautilus") end,
+              {description = "open nautilus", group = "launcher"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -638,10 +638,10 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn_with_shell("xrandr -d :0 --output eDP-1 --mode 2048x1152")
 awful.util.spawn_with_shell("nm-applet &")
 awful.util.spawn_with_shell("blueman-applet &")
-awful.util.spawn_with_shell("owncloud &")
+-- awful.util.spawn_with_shell("owncloud &")
 awful.util.spawn_with_shell("nextcloud &")
 awful.util.spawn_with_shell("synology-drive &")
-awful.util.spawn_with_shell("/opt/Atempo/HN/bin/HNtray &")
+awful.util.spawn_with_shell("/opt/Atempo/HN/bin/AgentUI/agent-ui &")
 awful.util.spawn_with_shell("/usr/lib/polkit-gnome-authentication-agent-1 &")
 awful.util.spawn_with_shell("xscreensaver -no-splash")
 
