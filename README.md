@@ -130,3 +130,15 @@ xterm
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
 ```
+# Virtualbox install
+```
+wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmor --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] http://download.virtualbox.org/virtualbox/debian $(. /etc/os-release && echo "$VERSION_CODENAME") contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+sudo apt update
+sudo apt install virtualbox-7.1
+vboxmanage -v | cut -dr -f1
+wget https://download.virtualbox.org/virtualbox/7.1.0/Oracle_VirtualBox_Extension_Pack-7.1.0.vbox-extpack
+sudo vboxmanage extpack install Oracle_VirtualBox_Extension_Pack-7.1.0.vbox-extpack
+sudo usermod -aG vboxusers $USER
+reboot
+```
